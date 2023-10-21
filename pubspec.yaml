@@ -22,6 +22,7 @@ flutter:
   uses-material-design: true
   assets:
     - assets/images/splash_logo.png
+    - assets/lottie/castle.json
   fonts:
     - family: Raleway
       fonts:
