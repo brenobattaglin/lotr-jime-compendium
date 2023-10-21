@@ -1,16 +1,7 @@
 # jime_compendium
 
-A new Flutter project.
+A compendium for LOTR JIME.
 
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+<div align="center">
+    <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fopenclipart.org%2Fimage%2F2400px%2Fsvg_to_png%2F293844%2Funder-construction_geek_man_01.png&f=1&nofb=1&ipt=cb509f09748b7317d61dda21b59f2ba99a2a62758cff3c74efdd242611142a52&ipo=images" width="300px" >
+</div>
