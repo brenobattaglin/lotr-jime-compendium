@@ -1,4 +1,5 @@
 const String _imagePath = 'assets/images';
+const String _lottiePath = 'assets/lottie';
 
 class AppImageAssets {
   static const String splashLogo = "$_imagePath/splash_logo.png";
