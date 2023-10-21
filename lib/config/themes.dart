@@ -26,9 +26,9 @@ class Themes {
 
   static InputDecorationTheme _getInputDecorationTheme() => InputDecorationTheme(
         contentPadding: const EdgeInsets.all(AppPadding.p8),
-        hintStyle: TextStyles.getRegularStyle(color: AppColors.grey1),
-        labelStyle: TextStyles.getMediumStyle(color: AppColors.darkGrey),
-        errorStyle: TextStyles.getRegularStyle(color: AppColors.error),
+        hintStyle: AppTextStyles.getRegularStyle(color: AppColors.grey1),
+        labelStyle: AppTextStyles.getMediumStyle(color: AppColors.darkGrey),
+        errorStyle: AppTextStyles.getRegularStyle(color: AppColors.error),
         //enabled border
         enabledBorder: const OutlineInputBorder(
           borderSide: BorderSide(
@@ -62,29 +62,29 @@ class Themes {
       );
 
   static TextTheme _getTextTheme() => TextTheme(
-        displayLarge: TextStyles.getSemiBoldStyle(
+        displayLarge: AppTextStyles.getSemiBoldStyle(
           color: AppColors.darkGrey,
-          fontSize: FontSizes.large,
+          fontSize: AppFontSize.large,
         ),
-        titleMedium: TextStyles.getMediumStyle(
+        titleMedium: AppTextStyles.getMediumStyle(
           color: AppColors.lightGrey,
-          fontSize: FontSizes.medium,
+          fontSize: AppFontSize.medium,
         ),
-        titleSmall: TextStyles.getMediumStyle(
+        titleSmall: AppTextStyles.getMediumStyle(
           color: AppColors.primary,
-          fontSize: FontSizes.medium,
+          fontSize: AppFontSize.medium,
         ),
-        bodySmall: TextStyles.getRegularStyle(
+        bodySmall: AppTextStyles.getRegularStyle(
           color: AppColors.grey1,
         ),
-        bodyLarge: TextStyles.getRegularStyle(
+        bodyLarge: AppTextStyles.getRegularStyle(
           color: AppColors.grey,
         ),
       );
 
   static ElevatedButtonThemeData _getElevatedButtonTheme() => ElevatedButtonThemeData(
         style: ElevatedButton.styleFrom(
-          textStyle: TextStyles.getRegularStyle(
+          textStyle: AppTextStyles.getRegularStyle(
             color: AppColors.white,
           ),
           backgroundColor: AppColors.primary,
@@ -108,9 +108,9 @@ class Themes {
         color: AppColors.primary,
         elevation: AppSize.s4,
         shadowColor: AppColors.darkPrimary,
-        titleTextStyle: TextStyles.getRegularStyle(
+        titleTextStyle: AppTextStyles.getRegularStyle(
           color: AppColors.white,
-          fontSize: FontSizes.large,
+          fontSize: AppFontSize.large,
         ),
       );
 }
