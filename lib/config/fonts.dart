@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 
-class FontConstants {
+class AppFont {
   static const String fontFamily = "Raleway";
 }
 
-class FontWeights {
+class AppFontWeight {
   static const FontWeight thin = FontWeight.w100;
   static const FontWeight extraLight = FontWeight.w200;
   static const FontWeight light = FontWeight.w300;
@@ -16,7 +16,7 @@ class FontWeights {
   static const FontWeight black = FontWeight.w900;
 }
 
-class FontSizes {
+class AppFontSize {
   static const double small = 12.0;
   static const double medium = 14.0;
   static const double large = 16.0;
