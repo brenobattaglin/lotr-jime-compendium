@@ -7,6 +7,7 @@ class AppImageAssets {
 
 class AppLottieAssets {
   static const String castle = "$_lottiePath/castle.json";
+  static const String warning = "$_lottiePath/warning.json";
 }
 
 class AppLottieAssetSize {
