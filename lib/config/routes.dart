@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:jime_compendium/presentation/splash/splash.dart';
+import 'package:jime_compendium/presentation/unknown/unknown.dart';
 import 'package:jime_compendium/presentation/work_in_progress/work_in_progress.dart';
 
 class Routes {
@@ -16,15 +17,7 @@ class RouteGenerator {
       case Routes.workInProgressRoute:
         return MaterialPageRoute(builder: (_) => const WorkInProgressView());
       default:
-        return undefinedRoute();
+        return MaterialPageRoute(builder: (_) => const UnknownView());
     }
   }
-
-  static Route<MaterialPageRoute> undefinedRoute() {
-    return MaterialPageRoute(
-      builder: (_) => Scaffold(
-        appBar: AppBar(title: const Text(AppStrings.noRouteFound)),
-        body: const Center(child: Text(AppStrings.noRouteFound)),
-      ),
-    );
-  }
+}
