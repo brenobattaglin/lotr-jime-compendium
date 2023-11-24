@@ -23,6 +23,7 @@ flutter:
   assets:
     - assets/images/splash_logo.png
     - assets/lottie/castle.json
+    - assets/lottie/warning.json
   fonts:
     - family: Raleway
       fonts:
