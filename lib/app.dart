@@ -17,7 +17,7 @@ class _AppState extends State<App> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      theme: Themes.lightTheme,
+      theme: Themes.darkTheme,
       initialRoute: Routes.splashRoute,
       onGenerateRoute: RouteGenerator.getRoute,
       debugShowCheckedModeBanner: false,
