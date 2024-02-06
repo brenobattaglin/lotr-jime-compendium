@@ -29,7 +29,7 @@ class _SplashViewState extends State<SplashView> {
   Widget build(BuildContext context) => _buildScaffold();
 
   Widget _buildScaffold() => const Scaffold(
-        backgroundColor: AppColors.darkPrimary,
+        backgroundColor: AppColors.black,
         body: Center(
           child: Image(
             image: AssetImage(AppImageAssets.splashLogo),
@@ -41,5 +41,5 @@ class _SplashViewState extends State<SplashView> {
     _timer = Timer(const Duration(seconds: 2), _pushToWipView);
   }
 
-  _pushToWipView() => Navigator.pushReplacementNamed(context, Routes.workInProgressRoute);
+  _pushToWipView() => Navigator.pushReplacementNamed(context, Routes.onboardingRoute);
 }
