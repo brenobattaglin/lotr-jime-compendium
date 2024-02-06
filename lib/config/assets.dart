@@ -3,6 +3,10 @@ const String _lottiePath = 'assets/lottie';
 
 class AppImageAssets {
   static const String splashLogo = "$_imagePath/splash_logo.png";
+  static const String onboarding1 = "$_imagePath/onboarding_1.jpg";
+  static const String onboarding2 = "$_imagePath/onboarding_2.jpg";
+  static const String onboarding3 = "$_imagePath/onboarding_3.jpg";
+  static const String onboarding4 = "$_imagePath/onboarding_4.jpg";
 }
 
 class AppLottieAssets {
