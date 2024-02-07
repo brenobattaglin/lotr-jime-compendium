@@ -1,8 +1,9 @@
 export 'assets.dart';
 export 'colors.dart';
 export 'constraints.dart';
+export 'duration.dart';
 export 'fonts.dart';
 export 'routes.dart';
+export 'strings.dart';
 export 'styles.dart';
 export 'themes.dart';
-export 'strings.dart';

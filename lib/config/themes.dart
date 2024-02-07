@@ -3,7 +3,8 @@ import 'package:flutter/material.dart';
 import 'config.dart';
 
 class Themes {
-  static final ThemeData lightTheme = ThemeData(
+  static final ThemeData darkTheme = ThemeData(
+    scaffoldBackgroundColor: AppColors.black,
     primaryColor: AppColors.primary,
     primaryColorLight: AppColors.primary,
     primaryColorDark: AppColors.darkPrimary,
@@ -15,7 +16,9 @@ class Themes {
     elevatedButtonTheme: _getElevatedButtonTheme(),
     textTheme: _getTextTheme(),
     inputDecorationTheme: _getInputDecorationTheme(),
-    colorScheme: ColorScheme.fromSwatch().copyWith(secondary: AppColors.grey),
+    colorScheme: ColorScheme.fromSwatch().copyWith(
+      secondary: AppColors.grey,
+    ),
   );
 
   static CardTheme _getCardTheme() => const CardTheme(
@@ -62,20 +65,33 @@ class Themes {
       );
 
   static TextTheme _getTextTheme() => TextTheme(
+        headlineMedium: AppTextStyles.getMediumStyle(
+          color: AppColors.primary,
+          fontSize: AppFontSize.heading,
+        ),
         displayLarge: AppTextStyles.getSemiBoldStyle(
-          color: AppColors.darkGrey,
+          color: AppColors.primary,
+          fontSize: AppFontSize.large,
+        ),
+        titleLarge: AppTextStyles.getMediumStyle(
+          color: AppColors.primary,
           fontSize: AppFontSize.large,
         ),
         titleMedium: AppTextStyles.getMediumStyle(
-          color: AppColors.lightGrey,
+          color: AppColors.primary,
           fontSize: AppFontSize.medium,
         ),
         titleSmall: AppTextStyles.getMediumStyle(
           color: AppColors.primary,
           fontSize: AppFontSize.medium,
         ),
+        bodyMedium: AppTextStyles.getRegularStyle(
+          color: AppColors.white,
+          fontSize: AppFontSize.medium,
+        ),
         bodySmall: AppTextStyles.getRegularStyle(
-          color: AppColors.grey1,
+          color: AppColors.white,
+          fontSize: AppFontSize.small,
         ),
         bodyLarge: AppTextStyles.getRegularStyle(
           color: AppColors.grey,
