@@ -170,7 +170,7 @@ class OnboardingContent extends StatelessWidget {
     return Align(
       alignment: Alignment.bottomRight,
       child: TextButton(
-        onPressed: null,
+        onPressed: () => Navigator.pushReplacementNamed(context, Routes.workInProgressRoute),
         child: Text(
           AppStrings.skip,
           textAlign: TextAlign.end,
