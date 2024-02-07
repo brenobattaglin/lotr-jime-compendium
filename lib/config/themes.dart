@@ -4,6 +4,7 @@ import 'config.dart';
 
 class Themes {
   static final ThemeData darkTheme = ThemeData(
+    scaffoldBackgroundColor: AppColors.black,
     primaryColor: AppColors.primary,
     primaryColorLight: AppColors.primary,
     primaryColorDark: AppColors.darkPrimary,
@@ -15,7 +16,9 @@ class Themes {
     elevatedButtonTheme: _getElevatedButtonTheme(),
     textTheme: _getTextTheme(),
     inputDecorationTheme: _getInputDecorationTheme(),
-    colorScheme: ColorScheme.fromSwatch().copyWith(secondary: AppColors.grey),
+    colorScheme: ColorScheme.fromSwatch().copyWith(
+      secondary: AppColors.grey,
+    ),
   );
 
   static CardTheme _getCardTheme() => const CardTheme(
