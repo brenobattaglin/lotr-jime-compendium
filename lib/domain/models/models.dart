@@ -1,1 +1,1 @@
-export 'slider_object.dart';
+export 'slider_data.dart';
