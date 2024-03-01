@@ -19,11 +19,15 @@ class _$TestOnboardingViewDriver extends TestDriver
   int get pageIndex => 1;
 
   @override
-  List<SliderData> get sliderData =>
-      [SliderData('title', 'subtitle', AppImageAssets.firstOnboarding)];
+  List<SliderData> get sliderData => [
+        SliderData('title 1', 'subtitle', AppImageAssets.firstOnboarding),
+        SliderData('title 2', 'subtitle', AppImageAssets.firstOnboarding),
+        SliderData('title 3', 'subtitle', AppImageAssets.firstOnboarding),
+        SliderData('title 4', 'subtitle', AppImageAssets.firstOnboarding)
+      ];
 
   @override
-  int get sliderDataLength => 5;
+  int get sliderDataLength => 4;
 
   @override
   void setPageIndex(int index) {}

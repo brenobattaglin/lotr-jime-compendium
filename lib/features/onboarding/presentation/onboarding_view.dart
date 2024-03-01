@@ -24,6 +24,7 @@ class OnboardingView extends DrivableWidget<OnboardingViewDriver> {
   }
 
   Widget buildContent() => Expanded(
+        key: const Key('onboarding_content'),
         child: PageView.builder(
           controller: driver.pageController,
           onPageChanged: (index) {
@@ -37,21 +38,21 @@ class OnboardingView extends DrivableWidget<OnboardingViewDriver> {
       );
 
   Widget buildSlider() => Row(
+        key: const Key('onboarding_slide_indicator'),
         mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          ...List.generate(
-            driver.sliderData.length,
-            (index) => Padding(
-              padding: const EdgeInsets.all(AppPadding.p8),
-              child: OnboardingSlideIndicator(
-                isActive: index == driver.pageIndex,
-              ),
-            ),
+        children: buildSlideIndicators(),
+      );
+
+  List<Widget> buildSlideIndicators() => List.generate(
+        driver.sliderData.length,
+        (index) => Padding(
+          padding: const EdgeInsets.all(AppPadding.p8),
+          child: OnboardingSlideIndicator(
+            isActive: driver.isIndicatorActive(index),
           ),
-        ],
+        ),
       );
 
   @override
-  WidgetDriverProvider<OnboardingViewDriver> get driverProvider =>
-      $OnboardingViewDriverProvider();
+  WidgetDriverProvider<OnboardingViewDriver> get driverProvider => $OnboardingViewDriverProvider();
 }

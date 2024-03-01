@@ -17,13 +17,6 @@ class OnboardingViewDriver extends WidgetDriver {
   }
 
   @override
-  void didUpdateBuildContext(BuildContext context) {
-    _pageController = PageController(initialPage: 0);
-    _pageIndex = 0;
-    super.didUpdateBuildContext(context);
-  }
-
-  @override
   void dispose() {
     _pageController.dispose();
     super.dispose();
@@ -41,8 +34,12 @@ class OnboardingViewDriver extends WidgetDriver {
     notifyWidget();
   }
 
-  @TestDriverDefaultValue(
-      [SliderData('title', 'subtitle', AppImageAssets.firstOnboarding)])
+  @TestDriverDefaultValue([
+    SliderData('title 1', 'subtitle', AppImageAssets.firstOnboarding),
+    SliderData('title 2', 'subtitle', AppImageAssets.firstOnboarding),
+    SliderData('title 3', 'subtitle', AppImageAssets.firstOnboarding),
+    SliderData('title 4', 'subtitle', AppImageAssets.firstOnboarding)
+  ])
   List<SliderData> get sliderData => [
         _firstOnboardingSlide(),
         _secondOnboardingSlide(),
@@ -50,8 +47,11 @@ class OnboardingViewDriver extends WidgetDriver {
         _fourthOnboardingSlide(),
       ];
 
-  @TestDriverDefaultValue(5)
+  @TestDriverDefaultValue(4)
   int get sliderDataLength => sliderData.length;
+
+  @TestDriverDefaultValue(true)
+  bool isIndicatorActive(int index) => index == pageIndex;
 
   @TestDriverDefaultValue(SliderData('title4', 'subtitle4', 'imagePath4'))
   SliderData _fourthOnboardingSlide() => const SliderData(
@@ -87,14 +87,13 @@ class _TestDriverPageController extends EmptyDefault implements PageController {
   get initialPage => 0;
 
   @override
-  ScrollPosition createScrollPosition(ScrollPhysics physics,
-      ScrollContext context, ScrollPosition? oldPosition) {
-    return ScrollPositionWithSingleContext(
-        physics: const ScrollPhysics(), context: context);
+  ScrollPosition createScrollPosition(ScrollPhysics physics, ScrollContext context, ScrollPosition? oldPosition) {
+    return ScrollPositionWithSingleContext(physics: const ScrollPhysics(), context: context);
   }
 
   @override
   const _TestDriverPageController();
 
+  @override
   double get viewportFraction => 1.0;
 }

@@ -6,10 +6,9 @@ class OnboardingSlideContent extends StatelessWidget {
   final SliderData _sliderObject;
 
   const OnboardingSlideContent({
-    Key? key,
+    super.key,
     required SliderData sliderObject,
-  })  : _sliderObject = sliderObject,
-        super(key: key);
+  }) : _sliderObject = sliderObject;
 
   @override
   Widget build(BuildContext context) {
