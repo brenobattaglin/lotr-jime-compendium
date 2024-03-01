@@ -121,7 +121,7 @@ class Themes {
 
   static AppBarTheme _getAppBarTheme() => AppBarTheme(
         centerTitle: true,
-        color: AppColors.primary,
+        color: AppColors.black,
         elevation: AppSize.s4,
         shadowColor: AppColors.darkPrimary,
         titleTextStyle: AppTextStyles.getRegularStyle(
