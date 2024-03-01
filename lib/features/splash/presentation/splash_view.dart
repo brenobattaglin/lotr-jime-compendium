@@ -41,5 +41,6 @@ class _SplashViewState extends State<SplashView> {
     _timer = Timer(const Duration(seconds: 2), _pushToWipView);
   }
 
-  _pushToWipView() => Navigator.pushReplacementNamed(context, Routes.onboardingRoute);
+  _pushToWipView() =>
+      Navigator.pushReplacementNamed(context, Routes.onboardingRoute);
 }
