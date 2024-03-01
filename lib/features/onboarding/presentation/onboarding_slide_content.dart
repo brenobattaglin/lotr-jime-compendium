@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
-
-import '../../config/config.dart';
-import '../../domain/models/models.dart';
+import 'package:jime_compendium/config/config.dart';
+import 'package:jime_compendium/features/onboarding/onboarding.dart';
 
 class OnboardingSlideContent extends StatelessWidget {
   final SliderData _sliderObject;
@@ -25,15 +24,18 @@ class OnboardingSlideContent extends StatelessWidget {
   Widget _buildBackground(BuildContext context) {
     return ShaderMask(
       shaderCallback: (bound) {
-        return LinearGradient(end: FractionalOffset.topCenter, begin: FractionalOffset.bottomCenter, colors: [
-          Colors.black.withOpacity(1),
-          Colors.black.withOpacity(0.8),
-          Colors.black.withOpacity(0.3),
-          Colors.black.withOpacity(0.2),
-          Colors.black.withOpacity(0),
-          Colors.black.withOpacity(0.7),
-          Colors.black.withOpacity(1),
-        ]).createShader(bound);
+        return LinearGradient(
+            end: FractionalOffset.topCenter,
+            begin: FractionalOffset.bottomCenter,
+            colors: [
+              Colors.black.withOpacity(1),
+              Colors.black.withOpacity(0.8),
+              Colors.black.withOpacity(0.3),
+              Colors.black.withOpacity(0.2),
+              Colors.black.withOpacity(0),
+              Colors.black.withOpacity(0.7),
+              Colors.black.withOpacity(1),
+            ]).createShader(bound);
       },
       blendMode: BlendMode.colorBurn,
       child: Container(
@@ -73,7 +75,8 @@ class OnboardingSlideContent extends StatelessWidget {
     return Align(
       alignment: Alignment.bottomRight,
       child: TextButton(
-        onPressed: () => Navigator.pushReplacementNamed(context, Routes.workInProgressRoute),
+        onPressed: () =>
+            Navigator.pushReplacementNamed(context, Routes.workInProgressRoute),
         child: Text(
           AppStrings.skip,
           textAlign: TextAlign.end,

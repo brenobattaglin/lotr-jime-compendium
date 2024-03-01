@@ -10,12 +10,17 @@ part of 'onboarding_view_driver.dart';
 
 // This file was generated with widget_driver_generator version "1.0.3"
 
-class _$TestOnboardingViewDriver extends TestDriver implements OnboardingViewDriver {
+class _$TestOnboardingViewDriver extends TestDriver
+    implements OnboardingViewDriver {
+  @override
+  PageController get pageController => _TestDriverPageController();
+
   @override
   int get pageIndex => 1;
 
   @override
-  List<SliderData> get sliderData => [SliderData('title', 'subtitle', 'imagePath')];
+  List<SliderData> get sliderData =>
+      [SliderData('title', 'subtitle', AppImageAssets.firstOnboarding)];
 
   @override
   int get sliderDataLength => 5;
@@ -44,7 +49,8 @@ class _$TestOnboardingViewDriver extends TestDriver implements OnboardingViewDri
   }
 }
 
-class $OnboardingViewDriverProvider extends WidgetDriverProvider<OnboardingViewDriver> {
+class $OnboardingViewDriverProvider
+    extends WidgetDriverProvider<OnboardingViewDriver> {
   @override
   OnboardingViewDriver buildDriver() {
     return OnboardingViewDriver();

@@ -1,9 +1,8 @@
 import 'package:flutter/widgets.dart';
-import 'package:jime_compendium/domain/models/slider_data.dart';
+import 'package:jime_compendium/config/config.dart';
 import 'package:widget_driver/widget_driver.dart';
-import '../../domain/models/models.dart';
 
-import '../../config/config.dart';
+import '../domain/models/slider_data.dart';
 
 part 'onboarding_view_driver.g.dart';
 
@@ -11,6 +10,11 @@ part 'onboarding_view_driver.g.dart';
 class OnboardingViewDriver extends WidgetDriver {
   late PageController _pageController;
   late int _pageIndex;
+
+  OnboardingViewDriver({PageController? pageController}) {
+    _pageController = pageController ?? PageController(initialPage: 0);
+    _pageIndex = 0;
+  }
 
   @override
   void didUpdateBuildContext(BuildContext context) {
@@ -25,7 +29,8 @@ class OnboardingViewDriver extends WidgetDriver {
     super.dispose();
   }
 
-  PageController pageController() => _pageController;
+  @TestDriverDefaultValue(_TestDriverPageController())
+  PageController get pageController => _pageController;
 
   @TestDriverDefaultValue(1)
   int get pageIndex => _pageIndex;
@@ -36,7 +41,8 @@ class OnboardingViewDriver extends WidgetDriver {
     notifyWidget();
   }
 
-  @TestDriverDefaultValue([SliderData('title', 'subtitle', 'imagePath')])
+  @TestDriverDefaultValue(
+      [SliderData('title', 'subtitle', AppImageAssets.firstOnboarding)])
   List<SliderData> get sliderData => [
         _firstOnboardingSlide(),
         _secondOnboardingSlide(),
@@ -74,4 +80,21 @@ class OnboardingViewDriver extends WidgetDriver {
         AppStrings.firstOnboardingSubtitle,
         AppImageAssets.firstOnboarding,
       );
+}
+
+class _TestDriverPageController extends EmptyDefault implements PageController {
+  @override
+  get initialPage => 0;
+
+  @override
+  ScrollPosition createScrollPosition(ScrollPhysics physics,
+      ScrollContext context, ScrollPosition? oldPosition) {
+    return ScrollPositionWithSingleContext(
+        physics: const ScrollPhysics(), context: context);
+  }
+
+  @override
+  const _TestDriverPageController();
+
+  double get viewportFraction => 1.0;
 }

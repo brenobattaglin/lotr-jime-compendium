@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-
-import '../../config/config.dart';
+import 'package:jime_compendium/config/config.dart';
 
 class OnboardingSlideIndicator extends StatelessWidget {
   const OnboardingSlideIndicator({
