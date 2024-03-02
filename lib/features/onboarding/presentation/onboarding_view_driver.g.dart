@@ -10,8 +10,7 @@ part of 'onboarding_view_driver.dart';
 
 // This file was generated with widget_driver_generator version "1.0.3"
 
-class _$TestOnboardingViewDriver extends TestDriver
-    implements OnboardingViewDriver {
+class _$TestOnboardingViewDriver extends TestDriver implements OnboardingViewDriver {
   @override
   PageController get pageController => _TestDriverPageController();
 
@@ -27,10 +26,15 @@ class _$TestOnboardingViewDriver extends TestDriver
       ];
 
   @override
-  int get sliderDataLength => 4;
+  int get pageCount => 4;
 
   @override
   void setPageIndex(int index) {}
+
+  @override
+  bool isIndicatorActive(int index) {
+    return true;
+  }
 
   @override
   SliderData _fourthOnboardingSlide() {
@@ -53,8 +57,7 @@ class _$TestOnboardingViewDriver extends TestDriver
   }
 }
 
-class $OnboardingViewDriverProvider
-    extends WidgetDriverProvider<OnboardingViewDriver> {
+class $OnboardingViewDriverProvider extends WidgetDriverProvider<OnboardingViewDriver> {
   @override
   OnboardingViewDriver buildDriver() {
     return OnboardingViewDriver();

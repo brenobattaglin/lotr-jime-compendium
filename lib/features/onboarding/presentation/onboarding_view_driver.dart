@@ -48,7 +48,7 @@ class OnboardingViewDriver extends WidgetDriver {
       ];
 
   @TestDriverDefaultValue(4)
-  int get sliderDataLength => sliderData.length;
+  int get pageCount => sliderData.length;
 
   @TestDriverDefaultValue(true)
   bool isIndicatorActive(int index) => index == pageIndex;

@@ -1,10 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:jime_compendium/config/config.dart';
+import 'package:jime_compendium/features/onboarding/onboarding.dart';
 import 'package:widget_driver/widget_driver.dart';
-
-import 'onboarding_slide_content.dart';
-import 'onboarding_view_driver.dart';
-import 'onboarding_view_indicator.dart';
 
 class OnboardingView extends DrivableWidget<OnboardingViewDriver> {
   OnboardingView({super.key});
@@ -30,7 +27,7 @@ class OnboardingView extends DrivableWidget<OnboardingViewDriver> {
           onPageChanged: (index) {
             driver.setPageIndex(index);
           },
-          itemCount: driver.sliderData.length,
+          itemCount: driver.pageCount,
           itemBuilder: (context, index) => OnboardingSlideContent(
             sliderObject: driver.sliderData[index],
           ),
