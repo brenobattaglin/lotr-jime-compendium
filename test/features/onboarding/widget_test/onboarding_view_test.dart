@@ -22,20 +22,23 @@ void main() {
 
   Widget buildWidgetForTesting() => buildTestApp(OnboardingView());
 
-  testWidgets('should build slide content', (tester) async {
-    await tester.pumpWidget(buildWidgetForTesting());
-    await tester.pump();
+  group('when view is built', () {
+    testWidgets('should build slide content', (tester) async {
+      await tester.pumpWidget(buildWidgetForTesting());
+      await tester.pump();
 
-    expect(find.byKey(const Key('onboarding_content')), findsOneWidget);
-    expect(find.byType(PageView), findsOneWidget);
-    expect(find.byType(OnboardingSlideContent), findsOneWidget);
-  });
+      expect(find.byKey(const Key('onboarding_content')), findsOneWidget);
+      expect(find.byType(PageView), findsOneWidget);
+      expect(find.byType(OnboardingSlideContent), findsOneWidget);
+    });
 
-  testWidgets('should build slide indicator', (tester) async {
-    await tester.pumpWidget(buildWidgetForTesting());
-    await tester.pump();
+    testWidgets('should build slide indicator', (tester) async {
+      await tester.pumpWidget(buildWidgetForTesting());
+      await tester.pump();
 
-    expect(find.byKey(const Key('onboarding_slide_indicator')), findsOneWidget);
-    expect(find.byType(OnboardingSlideIndicator), findsNWidgets(4));
+      expect(
+          find.byKey(const Key('onboarding_slide_indicator')), findsOneWidget);
+      expect(find.byType(OnboardingSlideIndicator), findsNWidgets(4));
+    });
   });
 }
